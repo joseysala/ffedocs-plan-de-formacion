@@ -38,11 +38,21 @@ Para poder utilizar esta herramienta, sigue los siguientes pasos:
 
 4) Modifica el fichero `datos_ciclo.txt` ubicado en "RellenaPlanFormacionFFE\app\data" modificando los registros de acuerdo al IES, Ciclo, Módulos evaluados, RAs involucrados, tutor docente...
 
-5) Ejecuta el fichero `RellenaPlanFormacionFFE.exe`
+5) **Paso opcional no bloqueante**: Si se quiere firmar el pdf con firma FNMT, se deben añadir como variables de entorno:
+    - *CERT_PATH*: La ruta absoluta del certificado .PK12. Ejemplo en windows: setx CERT_PATH "C:\\Users\\jsala\\mi_certificado.p12"
+    - *CERT_PASSWORD*: la contraseña de la clave privada de dicho certificado. Ejemplo en windows: setx CERT_PASSWORD "contraseña"
 
-6) Revisa que todos los planes se han generado y que el contenido se ajusta a lo esperado
+    **Nota**: El registro de variables puedes hacerlo en Windows desde "ventanita negra": `cmd` o `powershell`. Si no se registran esas variables de entorno, se generarán los pdfs pero no se procederá a su firma.
 
-7) Si hubiera algun error, actualiza de nuevo los ficheros txt y re-ejecuta la aplicación. Los planes generados se sobreescriben.
+6) Ejecuta el fichero `RellenaPlanFormacionFFE.exe`
+
+7) Revisa que todos los planes se han generado y que el contenido se ajusta a lo esperado. Los pdfs sin firmar estarán en una carpeta `<codigo_ciclo>_planes_sin_firmar` y los pdfs firmados en `<codigo_ciclo>_planes_firmados`.
+
+8) Si hubiera algun error, actualiza de nuevo los ficheros txt y re-ejecuta la aplicación. Los planes generados se sobreescriben.
+
+9) No olvides "vaciar" las variables de entorno si has firmado digitalmente los documentos:
+   -Ejemplo en windows: setx CERT_PATH "" y posteriormente:  reg delete HKCU\Environment /V CERT_PATH /F
+   -Ejemplo en windows: setx CERT_PASSWORD "" y posteriormente: reg delete HKCU\Environment /V CERT_PASSWORD /F
 
 ## 🔧 Tecnologías utilizadas
 
@@ -50,6 +60,7 @@ Para poder utilizar esta herramienta, sigue los siguientes pasos:
 - Log slf4j + Logback
 - itextpdf
 - jpackage + signtool
+- java security + bouncycastle
 
 ## 📁 Estructura del proyecto
 
