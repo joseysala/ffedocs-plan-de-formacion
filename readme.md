@@ -82,3 +82,10 @@ src/
 ├─ ffe_docs_plan_formacion.log
 └─ readme.md
 ```
+
+## ✅ Bug fixing
+
+- Adaptación de los ficheros de entrada:
+  - Se eliminan los nombres de los pié de firmas
+  - Se añade email de empresa
+  - De acuerdo a jefatura de estudios (11/02/26), el periodo de FFEs en 2º será siempre `periodo número 2`
