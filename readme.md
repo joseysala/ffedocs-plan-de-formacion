@@ -54,8 +54,8 @@ Para poder utilizar esta herramienta, sigue los siguientes pasos:
 
 ## 🔧 Tecnologías utilizadas
 
-- Maven + Java 23
-- Log slf4j + Logback
+- Maven + Java 21 (LTS)
+- slf4j + Logback
 - itextpdf
 - jpackage + signtool
 - java security + bouncycastle
@@ -84,13 +84,12 @@ src/
 ## ✅ Bug fixing
 
 - Adaptación de los ficheros de entrada:
-  - Se eliminan los nombres de los pié de firmas
-  - Se añade email de empresa
-  - De acuerdo a jefatura de estudios (11/02/26), el periodo de FFEs en 2º será siempre `periodo número 2`
-
+- Se eliminan los nombres de los pié de firmas
+- Se añade email de empresa
+- De acuerdo a jefatura de estudios (11/02/26), el periodo de FFEs en 2º será siempre `periodo número 2`
 
 ## ✅ Versiones
 
-v1.0.1: Permite generar los planes de formación con el formato antiguo a partir de dos ficheros txt.
-v2.0.1: Permite generar los planes de formación con el formato nuevo y posteriormente firmarlos a partir de dos ficheros txt.
-v3.0.0: Permite generar los planes de formación con el formato nuevo y posteriormente firmarlos a partir de un fichero excel.
+- v1.0.1: Permite generar los planes de formación con el formato antiguo a partir de dos ficheros txt.
+- v2.0.1: Permite generar los planes de formación con el formato nuevo y posteriormente firmarlos a partir de dos ficheros txt.
+- v3.0.0: Permite generar los planes de formación con el formato nuevo y posteriormente firmarlos a partir de un fichero excel.
