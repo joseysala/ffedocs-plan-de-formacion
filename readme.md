@@ -22,6 +22,8 @@ Al finalizar la ejecución, se habrán creado un plan formativo por cada alumno 
     Apellido1Alumno_CodigoCiclo.pdf (alumnos con un único apellido)
 ```
 
+Además de generar los documentos, en la v3.0.0, si el docente dispone de certificado FNMT (*.p12) e informa las variables de entorno necesarias, la aplicación también firma digitalmente cada documento en la correspondiente casilla de firma del tutor docente.
+
 ## Releases
 
 Para facilitar la distribución de la herramienta se ha generado una release con todo lo necesario para poder ejecutarlo. La puedes encontrar en la sección  `releases` dentro de este repositorio de GitHub como un fichero ZIP.
